@@ -1,0 +1,146 @@
+@import url('root.css');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.hero {
+    background-size:cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--navbar-text);
+    background-color: #0d4220b2;
+    outline: 2px solid black;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
+}
+
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--navbar);
+    color: var(--navbar-text);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+.banner{
+    background-size:cover;
+    background-color: var(--navbar);
+}
+
+
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+    color: var(--navbar-text);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
+}
+
+
+.features h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+
+.feature {
+    background-color: var(--navbar);
+    color: var(--navbar-text);
+    outline: 2px solid black;
+    border-radius: 5px;
+    margin: 20px;
+    max-width: 300px;
+    display: inline-block;
+}
+
+
+.feature img {
+    max-width: 100px;
+}
+
+
+.download {
+    text-align: center;
+    background-color: transparent;
+    padding: 100px 0;
+}
+
+
+.download h2 {
+    font-size: 24px;
+}
+
+
+.contact {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+}
+
+
+.contact h2 {
+    font-size: 24px;
+}

@@ -1,0 +1,26 @@
+:root {
+    --navbar: #023020;
+    --navbar-text: #D2B48C;
+    --background: #D2B48C;
+    --font-family: sans-serif;
+    --font-color: #D2B48C;
+    --dashboard-button-background: #023020;
+    --dashboard-button-color: white;
+    --black: #000000;
+    --white: #ffffff;
+    --maroon: #800000;
+    --file-bar: #796149;
+    --file-item: #02302073;
+    --text-color: black;
+  }
+
+  .dark-theme{
+    --navbar: #191970;
+    --navbar-text: white;
+    --background: black;
+    --font-family: sans-serif;
+    --text-color: white;
+    --dashboard-button-background: #191970;
+    --font-color: white;
+    
+  }

@@ -1,0 +1,129 @@
+
+@import url('root.css');
+
+body{
+    background-color: var(--background);
+}
+
+.AccountRecovery {
+    justify-content: center;
+}
+
+.navbar {
+    background-color: var(--navbar); /* Use the CSS variable */
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--navbar-text); /* Use the CSS variable */
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 4px;
+    width: 0;
+    background: var(--navbar-hover-bg); /* Use the CSS variable */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.navbar-toggle {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    text-decoration: none;
+    color: var(--navbar-text); /* Use the CSS variable */
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--navbar);
+    border:none;
+    font-size: 14px;
+  }
+
+  .navbar-toggle::after{
+    content: '';
+    height: 4px;
+    width: 0;
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+  }
+  
+  .navbar-toggle:hover::after{
+    width: 100%;
+  }
+
+.fields {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.errors {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+}
+
+#inputuser, #inputotp, #inputnpassword, #inputcpassword {
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 15px;
+    width: 150px;
+    height: 10px;
+    display: flex;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 8px;
+    font-size: 2em;
+    cursor: pointer;
+}

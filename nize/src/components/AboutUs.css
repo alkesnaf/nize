@@ -1,0 +1,33 @@
+
+h2 {
+  margin-bottom: 10px;
+  text-indent: 10px
+}
+
+p {
+  text-indent: 20px; /* Adjust the value to your preference */
+}
+
+.navbar {
+  width: 100%;
+  background-color: #023020;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #e7dacc;
+  text-transform: uppercase;
+  position: relative;
+}
+

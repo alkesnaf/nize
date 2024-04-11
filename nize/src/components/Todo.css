@@ -1,0 +1,217 @@
+.Todo {
+  font-family: sans-serif;
+  font-style: Bold;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.TodoNavBar {
+  width: 100%;
+  background-color: var(--navbar);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TodoNavBar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.TodoNavBar ul li a{
+  text-decoration: none;
+  color: var(--navbar-text);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.TodoNavBar ul li::after{
+  content: '';
+  height: 4px;
+  width: 0;
+  background: var(--black);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.TodoNavBar ul li:hover::after{
+    width: 100%;
+  }
+
+.TodoTitle{
+    font-style: bold;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.navbar-toggle {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  text-decoration: none;
+  color: var(--navbar-text); /* Use the CSS variable */
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--navbar);
+  border:none;
+  font-size: 14px;
+}
+
+.navbar-toggle::after{
+  content: '';
+  height: 4px;
+  width: 0;
+  background-color: var(--black);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.navbar-toggle:hover::after{
+  width: 100%;
+}
+
+.add-task{
+    background-color: var(--navbar);
+    color: var(--navbar-text);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-task-button{
+    position: absolute;
+    top: 125px;
+    left: 700px;
+}
+
+.check-box {
+    display: block;
+    position: relative;
+    left: -150px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+
+.check-box input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    height: 50px;
+    width: 50px;
+    background-color: #eee;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+.check-box:hover input ~ .checkmark{
+    background-color: #ccc;
+}
+.check-box input:checked ~ .checkmark{
+    background-color: #ccc;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check-box input:checked ~ .checkmark:after{
+    display: block;
+}
+
+.check-box .checkmark:after{
+    left: 16px;
+    top: 4px;
+    width: 13px;
+    height: 30px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);   
+}
+
+.ToDoList {
+    justify-content: center;
+    top: 30px;
+}
+
+.layout{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.left-side {
+    flex: 1; 
+    position: center;
+    text-align:left;
+    margin-top: 20px;
+    width: 65%;  
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.right-side {
+    flex: 1; 
+    position: center;
+    text-align: right;
+    padding-left: 10px;
+    font-size: 16px;
+    height: 0%;
+  }
+
+.todo-item {
+    display: flex;
+    align-items: flex-start;
+    width: 40%; 
+    border: 1px solid black; 
+    padding: 20px;
+    margin-top: 20px; 
+    border-radius: 8px; 
+    background-color: #eee;
+    max-height: 55px;
+  }
+
+  .divider{
+    width: 1px;
+    background-color: black;
+    height: 1.5cm;
+    margin-left: 150px;
+  }
+
+  .TodoContent{
+    justify-content: center;
+}
+
+.todo-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  padding: 0;
+  font-size: 16px;
+  transition: text-decoration 1s ease; /* Transition for underline */
+}
+
+.todo-button:hover {
+  text-decoration: underline; /* Underline on hover */
+}

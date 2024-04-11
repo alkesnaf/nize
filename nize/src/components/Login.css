@@ -1,0 +1,120 @@
+@import url('root.css');
+
+.Login{
+    justify-content: center;
+
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.navbar {
+    background-color: var(--navbar);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--navbar-text);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 4px;
+    width: 0;
+    background: var(--black);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.navbar-toggle {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    text-decoration: none;
+    color: var(--navbar-text); /* Use the CSS variable */
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--navbar);
+    border:none;
+    font-size: 14px;
+  }
+
+  .navbar-toggle::after{
+    content: '';
+    height: 4px;
+    width: 0;
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+  }
+  
+  .navbar-toggle:hover::after{
+    width: 100%;
+  }
+
+.fields{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+#inputusername, #inputpassword{
+    border-radius: 25px;
+    border: 2px solid var(--black);
+    padding: 15px;
+    width: 150px;
+    height: 10px;
+    display: flex;
+    margin: 10px;
+}
+
+.login-button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 25px;
+    border: 2px solid var(--black);
+    padding: 8px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.forgot-password-link {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px;
+    color: var(--text-color);
+}
+
+#fplink {
+    color: var(--text-color);
+}

@@ -1,0 +1,41 @@
+.search {
+    margin: 20px 0; 
+  }
+  
+  .searchResultsContainer {
+    position: relative;
+  }
+  
+  .searchResults {
+    position: absolute;
+    top: 100%; 
+    left: 42.75%;
+    background:  white; 
+    width: 13%; 
+    z-index: 1; 
+    max-height: 200px; 
+    overflow-y: auto; 
+    border-radius: 8px;
+  }
+  
+  .searchResult {
+    padding: 6px;
+    text-decoration: none; 
+    color:#023020
+  }
+  
+  .searchResult a {
+    text-decoration: none; 
+    color: #0d4220; 
+    cursor: pointer;
+  }
+  
+  .searchResults::-webkit-scrollbar {
+    width: 8px; 
+    border-radius: 8px;
+  }
+  
+  .searchResults::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 8px;
+  }

@@ -1,0 +1,441 @@
+@import url('root.css');
+
+.Calendar {
+  font-family: var(--font-family);
+  font-style: Bold;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.CalendarBackground {
+  width: 100%;
+  height: 98vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.CalendarNavBar {
+  width: 100%;
+  background-color: var(--navbar);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CalendarNavBar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.CalendarNavBar ul li {
+  margin: 0 20px;
+  position: relative;
+}
+
+.CalendarNavBar ul li a {
+  text-decoration: none;
+  color: var(--font-color);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.CalendarNavBar ul li::after {
+  content: '';
+  height: 4px;
+  width: 0;
+  background: var(--black);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.CalendarNavBar ul li:hover::after {
+  width: 100%;
+}
+
+.navbar-toggle {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  text-decoration: none;
+  color: var(--navbar-text); /* Use the CSS variable */
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--navbar);
+  border:none;
+  font-size: 14px;
+}
+
+.calendar {
+  width: 75vw;
+  height: 97vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  left: 0px;
+  top: 26px;
+  position: absolute;
+}
+
+.navbar-toggle::after{
+  content: '';
+  height: 4px;
+  width: 0;
+  background-color: var(--black);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.navbar-toggle:hover::after{
+  width: 100%;
+}
+
+.CalendarContent {
+  width: 100%;
+  color: #3b3b3b;
+  text-align: center;
+}
+
+.CalendarContent h1 {
+  font-size: 45px;
+  margin-top: 80px;
+}
+
+.CalendarContent p {
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+.CalendarContent p a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav button {
+  margin-right: 10px; 
+  margin-left: 10px;
+  background-color: transparent; /* Makes the background of the buttons transparent */
+  border: none; /* Removes the border from the buttons */
+  outline: none; /* Removes the focus outline - consider accessibility implications */
+  cursor: pointer; /* Changes the cursor to indicate the element is clickable */
+  font-size: 30px;
+  padding: 14px;
+
+}
+
+.nav button:last-child {
+  margin-right: 0; 
+}
+
+
+.days {
+  /*
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 10px;
+    /*height: 75vh;
+    width: 90vw;
+    */
+}
+
+.day button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+  
+.day {
+  /*
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    font-weight: bold;
+    height: 10vh;
+    position: relative;
+    overflow: auto;
+}
+
+.add-event-button {
+  position: fixed;
+  bottom: 125px;
+  right: 875px;
+}
+
+.add-event {
+  background-color: var(--navbar);
+  color: var(--navbar-text);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
+
+.show-more-button {
+  background-color: #f5f5f5;
+  color: #023020;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 4px;
+  font-size: 11px;
+  top: 0;
+  right: 0;
+  border-block: solid;
+  border-radius: 5px;
+  height: 25px;
+  position: absolute;
+  font-weight: bold;
+ }
+
+ .event {
+  background-color: var(--navbar);
+  color: white;
+  font-size: 12px;
+  border-block: solid;
+  border-radius: 5px;
+  height: 30px;
+  cursor: pointer;
+  overflow: hidden;
+}
+  
+.event:hover{
+  background-color: var(--navbar);
+}
+
+.event-description{
+    margin: 5px;
+    padding: 5px;
+}
+    
+.event-details {
+    background-color: var(--navbar);
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 10px;
+    width: 25%;
+    height: auto;
+}
+    
+.event-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+    
+.event-details p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: white;
+}
+    
+.event-details button {
+    background-color: var(--background);
+    color: var(--white);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    display: inline-block;
+    gap: 5px;
+    margin-right: 8px;
+}
+    
+.event-details button:hover{
+    background-color: var(--background);
+}
+    
+.shared-event{
+    background-color: #084B4C;
+    color: white;
+    font-size: 12px;
+    border-block: solid;
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+    overflow: hidden;
+}
+    
+.shared-event-details{
+    background-color: #084B4C;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 10px;
+    width: 25%;
+    height: auto;
+    color: white;
+}
+    
+.shared-event-details button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    display: inline-block;
+    gap: 5px;
+    margin-right: 8px;
+}
+    
+.shared-event:hover{
+        background-color: #084B4C;
+}
+    
+.events-list{
+    background-color: var(--navbar);
+    color: var(--font-color);
+    border: 1px solid black;
+    position: absolute;
+    top: 60px;
+    right: 9px;
+    bottom: 10px;
+    padding: 10px;
+    width: 23%;
+    text-align: center;
+}
+
+.delete-event {
+  background-color: var(--navbar);
+  color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 10px;
+  width: 25%;
+  height: auto;
+}
+
+.delete-event h1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.delete-event button {
+  background-color: var(--background);
+  color: var(--white);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  display: inline-block;
+  gap: 5px;
+  margin-right: 8px;
+}
+
+form.search {
+  border: none;
+  padding: 0;
+  text-align: center; /* Center the search bar horizontally */
+}
+
+.Month{
+  color: var(--text-color);
+}
+
+input.searchbar {
+  width: 240px;
+  border-radius: 25px;
+  border: 2px solid black;
+  display: inline-block; /* Align the search bar horizontally */
+  padding: 9px 4px 9px 40px;
+  background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+  transform:translate(250%, 0);
+}
+
+.search {
+  margin: 20px auto; /* Center the search bar horizontally */
+}
+
+.searchResultsContainer {
+  position: relative;
+}
+
+.searchResults {
+  position: absolute;
+  top: 100%; 
+  left: 35%;
+  background:  white; 
+  width: 13%; 
+  z-index: 1; 
+  max-height: 200px; 
+  overflow-y: auto; 
+  border-radius: 8px;
+}
+
+.searchResult {
+  padding: 6px;
+  text-decoration: none; 
+  color:#023020
+}
+
+.searchResult a {
+  text-decoration: none; 
+  color: #0d4220; 
+  cursor: pointer;
+}
+
+.searchResults::-webkit-scrollbar {
+  width: 8px; 
+  border-radius: 8px;
+}
+
+.searchResults::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 8px;
+}
